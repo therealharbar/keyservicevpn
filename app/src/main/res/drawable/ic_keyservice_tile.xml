@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Повернём весь ключ, чтобы был под углом как на твоём примере -->
+    <group
+        android:rotation="-40"
+        android:pivotX="12"
+        android:pivotY="12">
+
+        <!-- Кольцо с дыркой (evenOdd = внутренний круг вырезается) -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="
+                M7,12
+                m-4.2,0
+                a4.2,4.2 0 1,0 8.4,0
+                a4.2,4.2 0 1,0 -8.4,0
+
+                M7,12
+                m-2.1,0
+                a2.1,2.1 0 1,1 4.2,0
+                a2.1,2.1 0 1,1 -4.2,0" />
+
+        <!-- Ствол ключа -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="
+                M10.2,11.1
+                H23.5
+                V12.9
+                H10.2
+                Z" />
+
+        <!-- Зубцы (чуть ниже, два зубчика) -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="
+                M16.0,12.9
+                V16.0
+                H17.8
+                V12.9
+                Z
+
+                M19.2,12.9
+                V15.1
+                H21.0
+                V12.9
+                Z" />
+    </group>
+
+</vector>

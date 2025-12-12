@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextInputLayout -->
+    <style name="KeyService.TextInput"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxStrokeColor">@color/colorOutline</item>
+        <item name="boxBackgroundColor">@color/colorBackground</item>
+        <item name="hintTextColor">@color/colorHint</item>
+
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+
+    </style>
+
+    <!-- Кнопки -->
+    <style name="KeyService.Button"
+        parent="Widget.MaterialComponents.Button">
+
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+
+    </style>
+
+</resources>

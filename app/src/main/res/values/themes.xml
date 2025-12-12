@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.KeyServiceVPN" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Базовые -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Убираем фиолетовое наследие -->
+        <item name="android:colorAccent">@color/colorAccent</item>
+
+        <!-- Input -->
+        <item name="textInputStyle">@style/KeyService.TextInput</item>
+
+        <!-- Buttons -->
+        <item name="materialButtonStyle">@style/KeyService.Button</item>
+
+    </style>
+
+</resources>

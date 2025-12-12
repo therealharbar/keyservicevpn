@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- ЗАГОЛОВОК -->
+
+    <!-- Поле ввода ключа -->
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="KeyService VPN"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trojanInputLayout"
+        style="@style/KeyService.TextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+
+        app:hintEnabled="false"
+        app:placeholderText="Вставьте сюда ваш ключ"
+        app:placeholderTextColor="@color/colorHint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trojanInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:maxLines="2"
+            android:textColor="@color/colorOnBackground"
+            android:textColorHint="@color/colorHint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- "key saved ✓" (будем менять из Kotlin) -->
+    <TextView
+        android:id="@+id/keySavedText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="13sp"
+        android:textColor="@color/colorOnBackground"
+        android:alpha="0.85"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/trojanInputLayout"
+        app:layout_constraintStart_toStartOf="@id/trojanInputLayout"
+        app:layout_constraintEnd_toEndOf="@id/trojanInputLayout"
+        android:layout_marginTop="8dp"/>
+
+    <!-- КНОПКА "ВСТАВИТЬ ИЗ БУФЕРА" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pasteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вставить из буфера"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/keySavedText"
+        app:layout_constraintStart_toStartOf="@id/trojanInputLayout"
+        android:layout_marginTop="12dp"
+        app:iconPadding="8dp"
+        app:cornerRadius="24dp"/>
+
+    <!-- КНОПКА ПОДКЛЮЧИТЬ/ОТКЛЮЧИТЬ -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toggleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Подключить VPN"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/pasteButton"
+        app:layout_constraintStart_toStartOf="@id/trojanInputLayout"
+        app:layout_constraintEnd_toEndOf="@id/trojanInputLayout"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="28dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"/>
+
+    <!-- СТАТУС -->
+
+    <!-- ПИНГ (кликабельный, обновляем по тапу) -->
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
+        android:text="Статус: 🔴 Отключено"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/trojanInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+    <TextView
+        android:id="@+id/pingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="6dp"
+        android:text="Пинг: —"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/trojanInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/statusText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

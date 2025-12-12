@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        // важно для v2ray-модуля: здесь лежит libv2ray.aar
+        flatDir {
+            dirs("v2ray/libs")
+        }
+    }
+}
+
+rootProject.name = "KeyServiceVPN"
+
+// ОБЯЗАТЕЛЬНО: и app, и v2ray
+include(":app", ":v2ray")

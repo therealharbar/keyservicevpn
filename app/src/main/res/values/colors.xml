@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Основные цвета -->
+    <color name="colorPrimary">#0B1F3B</color>          <!-- тёмно-скандинавский синий -->
+    <color name="colorPrimaryVariant">#172433</color>
+
+    <color name="colorBackground">#F7F3E9</color>       <!-- слоновая кость -->
+    <color name="colorOnBackground">#223447</color>
+
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- Нейтральные -->
+    <color name="colorOutline">#B6BCC6</color>
+    <color name="colorHint">#8A94A6</color>
+
+    <!-- Акцент (очень мягкий, не кричащий) -->
+    <color name="colorAccent">#8FAEDB</color>
+
+</resources>
